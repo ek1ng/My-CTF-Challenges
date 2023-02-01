@@ -1,0 +1,10 @@
+[mysql]
+host = "127.0.0.1"
+port = 3306
+username = "root"
+password = "root"
+database = "gopher_shop"
+
+[secret]
+session_secret = "hgame{GopherShop_M@gic_1nt_0verflow}"
+flag = "hgame{GopherShop_M@gic_1nt_0verflow}"

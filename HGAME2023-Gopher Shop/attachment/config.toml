@@ -1,0 +1,10 @@
+[mysql]
+host = "db"
+port = 3306
+username = "root"
+password = "root"
+database = "gopher_shop"
+
+[secret]
+session_secret = "a_session_secret"
+flag = "hgame{test}"
