@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Diary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        html {
+            height:100%;
+          }
+          
+          body {
+            margin:0;
+          }
+          
+          .bg {
+            animation:slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+            bottom:0;
+            left:-50%;
+            opacity:.5;
+            position:fixed;
+            right:-50%;
+            top:0;
+            z-index:-1;
+          }
+          
+          .bg2 {
+            animation-direction:alternate-reverse;
+            animation-duration:4s;
+          }
+          
+          .bg3 {
+            animation-duration:5s;
+          }
+          
+          .content {
+            background-color:rgba(255,255,255,.8);
+            border-radius:.25em;
+            box-shadow:0 0 .25em rgba(0,0,0,.25);
+            box-sizing:border-box;
+            left:50%;
+            padding:10vmin;
+            position:fixed;
+            text-align:center;
+            top:50%;
+            transform:translate(-50%, -50%);
+          }
+          
+          h1,h3 {
+            font-family:monospace;
+          }
+        
+          a{
+              text-decoration: none;
+              color: #000;
+          }
+        
+          a:hover {
+              color: rgb(168, 154, 154);
+          }
+          
+          @keyframes slide {
+            0% {
+              transform:translateX(-25%);
+            }
+            100% {
+              transform:translateX(25%);
+            }
+          }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+      <h1>Hello <%= username %>!
+      </h1>
+      <hr>
+      <h1><%- diary %></h1>
+      <br>
+      <form method="POST">
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="diary" placeholder="Input Your Secret Diary">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="sumbit">Update</button>
+                </div>
+              </div>
+        </div>
+    </form>
+    </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
